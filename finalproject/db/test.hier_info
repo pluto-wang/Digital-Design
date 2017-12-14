@@ -1,0 +1,104 @@
+|test
+y <= final:inst.y
+clk => div10_t:inst6.CLK
+flag => final:inst.flag
+r <= final:inst.r
+g <= final:inst.g
+pin_name <= <VCC>
+
+
+|test|final:inst
+clk => qn[3].CLK
+clk => qn[2].CLK
+clk => qn[1].CLK
+clk => qn[0].CLK
+flag => gre~0.OUTPUTSELECT
+flag => red~0.OUTPUTSELECT
+flag => yel~0.OUTPUTSELECT
+flag => G2~0.OUTPUTSELECT
+flag => R2~0.OUTPUTSELECT
+flag => qn[0].ENA
+flag => qn[3].ENA
+flag => qn[2].ENA
+flag => qn[1].ENA
+R1 => R2~0.DATAA
+G1 => G2~0.DATAA
+R2 <= R2~0.DB_MAX_OUTPUT_PORT_TYPE
+G2 <= G2~0.DB_MAX_OUTPUT_PORT_TYPE
+y <= yel~0.DB_MAX_OUTPUT_PORT_TYPE
+r <= red~0.DB_MAX_OUTPUT_PORT_TYPE
+g <= gre~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test|clk_gen:inst3
+1KHz <= div10_t:inst3.CLK_out
+clock => div10_t:inst.CLK
+100Hz <= div10_t:inst4.CLK_out
+10Hz <= div10_t:inst5.CLK_out
+1Hz <= div10_t:inst6.CLK_out
+
+
+|test|clk_gen:inst3|div10_t:inst3
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|clk_gen:inst3|div10_t:inst2
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|clk_gen:inst3|div10_t:inst1
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|clk_gen:inst3|div10_t:inst
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|clk_gen:inst3|div10_t:inst4
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|clk_gen:inst3|div10_t:inst5
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|clk_gen:inst3|div10_t:inst6
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|test|div10_t:inst6
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
